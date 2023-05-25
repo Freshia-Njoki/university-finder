@@ -7,7 +7,7 @@ function App() {
   const [inputData, setInputData] = useState("");
 
   const fetchData = async (searchParam) => {
-    fetch(`http://universities.hipolabs.com/search?country=${searchParam}`)
+    fetch(`https://universitiesapi.onrender.com/v1/api/universities/${searchParam}`)
       .then((res) => res.json())
       .then((data) => setSearchResponse(data));
   };
